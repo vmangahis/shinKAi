@@ -5,10 +5,10 @@ import ResultComponent from './components/ResultComponent';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <h1>Anime Watchlist Web Application</h1>
       <SearchComponent />
-      <ResultComponent />
+      
     </div>
   );
 }

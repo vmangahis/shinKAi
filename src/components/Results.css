@@ -1,0 +1,16 @@
+.search-column{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    grid-column-gap: 10px;
+}
+
+.search-column li{
+    list-style-type: none;
+    
+}
+
+.search-column img{
+    width:100px;
+    height:200px;
+}
