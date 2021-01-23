@@ -1,6 +1,7 @@
 import './App.css'
 import SearchComponent from './components/SearchComponent';
 import AnimeList from './components/AnimeList';
+import Watchlist from'./components/Watchlist';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <h1>Anime Watchlist Web Application</h1>
       <SearchComponent />
       <AnimeList />
+      <Watchlist />
     </div>
   );
 }
