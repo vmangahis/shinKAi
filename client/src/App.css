@@ -3,7 +3,17 @@
   padding:0;
 }
 
+li{
+  list-style: none;
+}
+
 div{
   text-align: center;
-  border:1px solid black;
+  
+}
+
+.App{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }

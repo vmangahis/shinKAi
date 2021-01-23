@@ -3,6 +3,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     grid-column-gap: 10px;
+    justify-items: stretch;
+    margin:auto;
 }
 
 .search-column li{

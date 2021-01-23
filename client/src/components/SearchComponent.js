@@ -6,10 +6,12 @@ import Searchbar from './Searchbar';
 const SearchComponent = () => {
     return (
         <>
-        <Searchbar />
-        <Button label = "Search" />
-        <Button label = "Clear" />
-        <ResultComponent />
+            <div>
+            <Searchbar />
+            <Button label = "Search" />
+            <Button label = "Clear" />
+            <ResultComponent />
+            </div>
             
         </>
     )
