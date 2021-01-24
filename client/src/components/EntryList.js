@@ -8,7 +8,6 @@ const EntryList = () => {
             
             <ul>
             <li><img src = "#" alt = "" /></li>
-            <li>TitleHere</li>
             </ul>
 
             <ul className = 'search-column'>
