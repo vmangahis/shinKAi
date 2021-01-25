@@ -3,32 +3,33 @@ const schema = mongoose.Schema;
 
 const ItemSchema = new schema({
 
-    title:{
+    anime_title:{
         type:String,
         required: true
     },
 
-    airstart:{
-        type:Date,
-        required:true
+    episodes:{
+        type:Number
     },
 
+    airstart:{
+        type:Date
+    },
 
     airend:{
-        type:Date,
-        required:true
+        type:Date
     },
 
-    
     status:{
-        type:String,
-        required:true
+        type:String
     },
 
-    episode:{
-        type:String,
-        required:true
+
+    img_url:{
+        type:String
     }
 
-})
+}, {collection : 'animedata'})
+
+module.exports = ItemModel = mongoose.model('animedata',ItemSchema);
 

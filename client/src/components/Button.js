@@ -1,7 +1,7 @@
-const Button = ({label}) => {
+const Button = ({label, clickfunction}) => {
     return (
         <>
-            <button>{label}</button>
+            <button onClick = {() => clickfunction()}>{label}</button>
         </>
     )
 

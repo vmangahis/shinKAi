@@ -3,6 +3,14 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const uri = require('../../config/key').URI;
 const db = mongoose.connection;
+const ItemModel = require('../../models/ItemModel');
+const cors = require('cors');
+
+router.use(cors());
+
+router.get("/api/anime", (req, res) => {
+
+
 mongoose.connect(uri, {useUnifiedTopology: true, useNewUrlParser: true})
 .then(() => {
     console.log('Api route connected to db');
@@ -11,10 +19,15 @@ mongoose.connect(uri, {useUnifiedTopology: true, useNewUrlParser: true})
     console.log('error');
 });
 
-router.get("/api/anime", (req, res) => {
-    console.log('api route GET REQUEST');
+
+
     
-    res.send('hello');
+        ItemModel.find({},{_id: 0}, (err, results) => {
+            
+            
+      //      res.send(JSON.stringify(results));
+      res.send(results);
+        })
 })
 
 
