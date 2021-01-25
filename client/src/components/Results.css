@@ -3,8 +3,9 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     grid-column-gap: 10px;
-    justify-items: stretch;
+    justify-items: center;
     margin:auto;
+    
 }
 
 .search-column li{
@@ -13,6 +14,6 @@
 }
 
 .search-column img{
-    width:100px;
+    width:200px;
     height:200px;
 }
