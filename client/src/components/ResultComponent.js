@@ -3,15 +3,16 @@ import Results from './Results';
 import './ResultComponent.css'
 import SearchColumnHeader from './SearchColumnHeader';
 
-const ResultComponent = () => {
+const ResultComponent = ({result}) => {
     
-
+    
     
     return (
         <>
-        <h3 className = 'result-header'>Result</h3>
+        <h1 className = 'result-header'>Search Result</h1>
         <SearchColumnHeader />
-        <Results />
+        <Results final = {result}  />
+       
         </>
     )
 }

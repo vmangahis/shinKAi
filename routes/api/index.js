@@ -8,7 +8,7 @@ const cors = require('cors');
 
 router.use(cors());
 
-router.get("/api/anime", (req, res) => {
+router.get("/api/anime/:title", (req, res) => {
 
 
 mongoose.connect(uri, {useUnifiedTopology: true, useNewUrlParser: true})
@@ -19,14 +19,16 @@ mongoose.connect(uri, {useUnifiedTopology: true, useNewUrlParser: true})
     console.log('error');
 });
 
+const que = req.params.title;
+
 
 
     
-        ItemModel.find({},{_id: 0}, (err, results) => {
+        ItemModel.find({anime_title: new RegExp(que,'i')},{_id: 0}, (err, results) => {
             
             
       //      res.send(JSON.stringify(results));
-      res.send(results);
+          res.send(results);
         })
 })
 
