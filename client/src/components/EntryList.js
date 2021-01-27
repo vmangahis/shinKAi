@@ -1,24 +1,26 @@
 import React from 'react'
 
-import Button from './Button'
 
-const EntryList = () => {
+
+const EntryList = ({entries}) => {
+
+    
+
+    let data = entries;
+    
     return (
         <>
-        {   /*  
-            <ul>
-            <li><img src = "#" alt = "" /></li>
-            </ul>
+            <p>{entries.img_url}</p>
+           {Object.keys(data).map((val)=>{
+               return(
+                <ul className = 'search-column'>
+                <li>{val.img_url}</li>
+                <li>{val.anime_title}</li>
 
-          <ul className = 'search-column'>
-        <li><img src = {""} alt = ""  /></li>
-        <li><p>Attack on Titan S1</p></li>
-        <li><p>04/07/13 - 09/29/13</p></li>
-        <li><p>25</p></li>
-        <li><p>Completed</p></li>
-        <li><Button label = 'Add' /></li>
-        </ul> */
-        }
+                </ul>
+
+               );
+           })}
         </>
     )
 }

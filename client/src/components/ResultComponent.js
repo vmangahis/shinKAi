@@ -3,7 +3,7 @@ import Results from './Results';
 import './ResultComponent.css'
 import SearchColumnHeader from './SearchColumnHeader';
 
-const ResultComponent = ({result}) => {
+const ResultComponent = ({result, resultFunction}) => {
     
     
     
@@ -11,8 +11,8 @@ const ResultComponent = ({result}) => {
         <>
         <h1 className = 'result-header'>Search Result</h1>
         <SearchColumnHeader />
-        <Results final = {result}  />
-       
+        <Results final = {result} buttonFunction = {resultFunction} />
+        
         </>
     )
 }

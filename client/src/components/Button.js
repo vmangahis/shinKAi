@@ -1,7 +1,7 @@
-const Button = ({label, clickfunction}) => {
+const Button = ({label, clickfunction, id}) => {
     return (
         <>
-            <button onClick = {() => clickfunction()}>{label}</button>
+            <button onClick = {() => clickfunction(id)}>{label}</button>
         </>
     )
 

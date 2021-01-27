@@ -1,12 +1,13 @@
 import EntryList from './EntryList';
 import SearchColumnHeader from './SearchColumnHeader'
-const AnimeList = () => {
+const AnimeList = ({watchlist}) => {
+    
     return (
         <>
             <h1>Listed Anime</h1>
             <div>
             <SearchColumnHeader />
-            <EntryList />
+            <EntryList entries = {watchlist} />
             </div>
         </>
     )

@@ -1,23 +1,20 @@
-import React, { useEffect } from 'react'
 import './Results.css'
-
 import Button from './Button';
-import SearchColumnHeader from './SearchColumnHeader'
-const Results = ({final}) => {
+const Results = ({final, buttonFunction}) => {
 
   
     return (
         <>
         
-      {final.map((val) => {
+      {final.map((val, index) => {
         return(<>
-          <ul className = 'search-column' key = {val._id}>
-        <li><img src = {val.img_url} alt = "" /></li>
-        <li><p>{val.anime_title}</p></li>
-        <li><p>{val.airstart} - {val.airend}</p></li>
-        <li><p>{val.episodes}</p></li>
-        <li><p>{val.status}</p></li>
-        <li><Button label = 'Add' /></li>
+          <ul className = 'search-column' >
+        <li key = {val._id}><img src = {val.img_url} alt = "" /></li>
+        <li key = {val._id}><p>{val.anime_title}</p></li>
+        <li key = {val._id}><p>{val.airstart} - {val.airend}</p></li>
+        <li key = {val._id}><p>{val.episodes}</p></li>
+        <li key = {val._id}><p>{val.status}</p></li>
+        <li key = {val._id}><Button label = 'Add' clickfunction = {buttonFunction} id={index}/></li>
         </ul>
         </>
         );
