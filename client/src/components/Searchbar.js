@@ -12,4 +12,4 @@ const Searchbar = ({click, reference}) => {
     )
 }
 
-export default Searchbar
+export default Searchbar;
