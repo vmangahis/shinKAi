@@ -24,6 +24,7 @@ function App() {
           
           console.log('clicked search button');
           const response = await fetch(`http://localhost:5000/api/anime/${search.current.value}`, {method: 'GET'})
+          console.log(response);
           const data = await response.json();
           setData(data);
           

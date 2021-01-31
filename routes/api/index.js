@@ -16,7 +16,7 @@ mongoose.connect(uri, {useUnifiedTopology: true, useNewUrlParser: true})
     console.log('Api route connected to db');
 })
 .catch((err) => {
-    console.log('error');
+    console.log(err);
 });
 
 const que = req.params.title;
@@ -28,6 +28,7 @@ const que = req.params.title;
             
             
       //      res.send(JSON.stringify(results));
+      console.log(results);
           res.send(results);
         })
 })
