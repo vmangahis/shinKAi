@@ -10,7 +10,6 @@ router.use(cors());
 
 router.get("/api/anime/:title", (req, res) => {
 
-
 mongoose.connect(uri, {useUnifiedTopology: true, useNewUrlParser: true})
 .then(() => {
     console.log('Api route connected to db');
@@ -20,14 +19,8 @@ mongoose.connect(uri, {useUnifiedTopology: true, useNewUrlParser: true})
 });
 
 const que = req.params.title;
-
-
-
     
         ItemModel.find({anime_title: new RegExp(que,'i')},{_id: 0}, (err, results) => {
-            
-            
-      //      res.send(JSON.stringify(results));
       console.log(results);
           res.send(results);
         })
