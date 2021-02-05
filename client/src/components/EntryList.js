@@ -1,11 +1,7 @@
-import React from 'react'
-
-
-
 const EntryList = ({entries}) => {
     
     let data = entries;
-    
+
     return (
         <>
             <p>{entries.img_url}</p>
