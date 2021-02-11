@@ -10,9 +10,7 @@ const EntryList = ({entries}) => {
                 <ul className = 'search-column'>
                 <li>{val.img_url}</li>
                 <li>{val.anime_title}</li>
-
                 </ul>
-
                );
            })}
         </>
