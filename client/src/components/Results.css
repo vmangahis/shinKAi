@@ -1,9 +1,10 @@
 .search-column{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     grid-column-gap: 10px;
-    justify-items: center;
+    justify-items: stretch;
+    
     margin:auto;
     
 }
