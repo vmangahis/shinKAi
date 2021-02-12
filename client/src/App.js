@@ -33,7 +33,7 @@ function App() {
 
 
   const addToList = (id) => {
-     
+    console.log(dat[id]);
     setAnimeList(dat[id]);
   }
 
