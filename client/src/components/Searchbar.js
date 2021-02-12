@@ -1,12 +1,12 @@
 import Button from './Button';
 
-const Searchbar = ({click, reference}) => {
+const Searchbar = () => {
     return (
         <>
             <div>
-            <input type = "text" placeholder = "Search..." className="search-input" ref={reference}/>
-            <Button label = 'Search' clickfunction={click} />
-            <Button label = 'Clear' />
+            <input type = "text" placeholder = "Search..." className="search-input"/>
+            <Button/>
+            <Button />
             </div>
         </>
     )
