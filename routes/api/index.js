@@ -38,7 +38,7 @@ router.get("/api/anime/", (req, res) => {
     
     
         
-            ItemModel.find({_id: 0}, (err, results) => {
+            ItemModel.find({},{_id: 0}, (err, results) => {
           console.log(results);
               res.send(results);
             })

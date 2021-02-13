@@ -1,26 +1,23 @@
-import './App.css'
-import SearchComponent from './components/SearchComponent';
-import AnimeList from './components/AnimeList';
-import React, {useState} from 'react';
-import {useSelector} from 'react-redux';
-
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
-
-  //Passing a function to setState actually has Previous state in the parameter
-
-  //useState(arrowFunction) - runs once 
-  //useState(function) - runs every render
-const isLoggedIn = useSelector((state) => state.login_auth);
-
-
   return (
-    <div className='App'>
-      <h1>Anime Watchlist Application</h1>
-      <p>h</p>
-      <p>{isLoggedIn}</p>
-      <SearchComponent/>
-      <AnimeList/>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
