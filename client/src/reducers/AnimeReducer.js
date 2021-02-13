@@ -1,6 +1,5 @@
 const animeLists = {
-
-
+    
 };
 
 const animeReducer = (state= animeLists, action) => {

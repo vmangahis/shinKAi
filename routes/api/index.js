@@ -26,5 +26,23 @@ const que = req.params.title;
         })
 })
 
+router.get("/api/anime/", (req, res) => {
+
+    mongoose.connect(uri, {useUnifiedTopology: true, useNewUrlParser: true})
+    .then(() => {
+        console.log('Api route connected to db');
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+    
+    
+        
+            ItemModel.find({_id: 0}, (err, results) => {
+          console.log(results);
+              res.send(results);
+            })
+    })
+
 
 module.exports = router;
