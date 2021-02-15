@@ -1,20 +1,18 @@
 import './App.css';
-import SearchComponent from './components/SearchComponent';
-import Searchbar from './components/Searchbar';
-import Watchlist from './components/Watchlist';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {Provider} from 'react-redux';
 import store from './store'
+
+import AppNavBar from './components/AppNavBar';
+import SearchList from './components/SearchList';
+
 function App() {
   return (
 
-    <>
-    <Provider store= {store} >
-    <h1 style = {{textAlign:"center"}}>Anime Watchlist Web Application</h1>
-    <Searchbar />
-    <SearchComponent />
-    <Watchlist />
-    </Provider>
-    </>
+    <div>
+    <AppNavBar />
+    <SearchList />
+    </div>    
   );
 }
 
