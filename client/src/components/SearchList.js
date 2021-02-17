@@ -44,7 +44,7 @@ const SearchList = () => {
                         <tr>
                             <th scope="row"> <img 
       src={img_url}
-      alt="new" width={200} height ={200}
+      alt="new" width={50} height ={50}
       /></th>
                             <td>{anime_title}</td>
                             <td>{air_date}</td>
