@@ -17,6 +17,13 @@ const animeReducer = (state = initialState, action) => {
             }
             break;
 
+        case DEL_ANIME:
+            return{
+                ...state,
+                anime: state.anime.filter((state) => state.id !== action.load)
+            }
+            break;
+
         default:
             return state;
             break;

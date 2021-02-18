@@ -7,9 +7,10 @@ export const getAnime = () =>{
 }
 
 
-export const delAnime = () =>{
+export const delAnime = id =>{
     return{
-        type: DEL_ANIME
+        type: DEL_ANIME,
+        load: id
     }
 }
 

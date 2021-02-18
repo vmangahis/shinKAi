@@ -1,5 +1,6 @@
 import {Container, Table, Button, ListGroupItem, ListGroup} from 'reactstrap';
 import {useDispatch, useSelector} from 'react-redux'
+import{delAnime} from '../actions/AnimeAction';
 const WatchList = () => {
 
     const dispatch = useDispatch();
@@ -20,13 +21,16 @@ const WatchList = () => {
                     </thead>
 
                     <tbody>
-                {anime.map(({_id, anime_title, status, img_url, episode, air_date})=> (
-                    <tr key={_id}>
-                        <th scope ="row"><img src ={img_url} width={100} height={100}/></th>
+                {anime.map(({id, anime_title, status, img_url, episode, air_date})=> (
+                    <tr>
+                        
+                        <th scope ="row" key={id}><img src ={img_url} width={100} height={100}/></th>
                         <td>{anime_title}</td>
                         <td>{episode}</td>
                         <td>{status}</td>
-                        <td><Button color = "light">&times;</Button></td>
+                        <td><Button color = "light"
+                        onClick={() => dispatch(delAnime(id))}
+                        >&times;</Button></td>
                     </tr>
 
                     
