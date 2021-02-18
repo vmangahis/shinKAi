@@ -29,6 +29,7 @@ const AppNavBar = () => {
 
 
     return (
+      <>
         <div>
       <Navbar color= "dark" dark expand="sm" className="p-5">
           <Container>
@@ -44,6 +45,7 @@ const AppNavBar = () => {
           </Container> 
       </Navbar>
     </div>
+    </>
     )
 }
 
