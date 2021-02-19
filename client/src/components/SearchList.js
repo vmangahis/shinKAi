@@ -37,13 +37,7 @@ const SearchList = () => {
                                 <h1>Nothing was searched....</h1>
                                  </td>
                             </tr>
-                            
-
-
-
-                        
                     </tbody>
-
             </Table>
         </Container>
         </>
