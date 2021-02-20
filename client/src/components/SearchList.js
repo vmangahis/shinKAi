@@ -19,7 +19,6 @@ const SearchList = () => {
     return (
         <>
         <Container>
-            <Button color = "primary">List Anime</Button>
             <Table dark responsive>
                     <thead>
                         <tr>
@@ -33,7 +32,7 @@ const SearchList = () => {
                     
                     <tbody>  
                             <tr>
-                                <td colspan = "5" className= "nothing">
+                            <td colSpan = "5" className= "nothing">
                                 <h1>Nothing was searched....</h1>
                                  </td>
                             </tr>

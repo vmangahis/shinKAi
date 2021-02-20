@@ -21,10 +21,12 @@ const WatchList = () => {
                     </thead>
 
                     <tbody>
-                {anime.map(({id, anime_title, status, img_url, episode, air_date})=> (
-                    <tr>
-                        
-                        <th scope ="row" key={id}><img src ={img_url} width={100} height={100}/></th>
+                {(anime.length === 0) ? <tr><td colSpan = "5" className= "nothing">
+                                <h1>Empty Watchlist...</h1>
+                                 </td></tr>
+                                 :anime.map(({id, anime_title, status, img_url, episode, air_date})=> (
+                    <tr key={id}>
+                        <th scope ="row"><img src ={img_url} width={100} height={100}/></th>
                         <td>{anime_title}</td>
                         <td>{episode}</td>
                         <td>{status}</td>

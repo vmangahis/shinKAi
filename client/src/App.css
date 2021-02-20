@@ -18,21 +18,11 @@ h1{
 }
 
 .nothing{
-  
   padding:40px;
   text-align: center;
 }
 
 
 .nothing > h1{
-  
   padding:40px;
-  
-}
-
-tbody:empty::after{
-  content: "Empty";
-  font-size:2em;
-  font-weight: bold;
-  text-align: right;
 }
