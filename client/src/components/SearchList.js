@@ -1,6 +1,5 @@
 import {Container, Table, Button} from 'reactstrap';
 import {useEffect} from 'react';
-import{v4 as uuidv4} from 'uuid';
 import {getAnime} from '../actions/AnimeAction';
 import {useDispatch} from 'react-redux';
 
@@ -14,11 +13,10 @@ const SearchList = () => {
     
     const dispatch = useDispatch();
     
-   
-    
     return (
         <>
         <Container>
+            <h1>Search Table</h1>
             <Table dark responsive>
                     <thead>
                         <tr>

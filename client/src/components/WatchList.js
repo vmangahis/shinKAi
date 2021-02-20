@@ -7,16 +7,17 @@ const WatchList = () => {
     const {anime} = useSelector(state => state.anime);
     return (
         <div>
-
-            <Container>
-                <h1>Your Watchlist</h1>
+            <h1>Your Watchlist</h1>
+            <Container className = "watchlist-container">
+                
                 <Table dark={true} className = "table">
-                    <thead>
+                    <thead className ="table-header" color="dark">
                         <tr>
                             <th></th>
                             <th>Title</th>
                             <th>Episodes</th>
                             <th>Status</th>
+                            <th></th>
                         </tr>
                     </thead>
 

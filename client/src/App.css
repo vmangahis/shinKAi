@@ -10,6 +10,16 @@ h1{
 
 .table{
   text-align: center;
+  position: relative;
+  
+  
+}
+
+.table-header > tr > th{
+  position:sticky;
+  top:0;
+  background-color:black;
+ border-bottom:5px solid gray;
   
 }
 
@@ -25,4 +35,9 @@ h1{
 
 .nothing > h1{
   padding:40px;
+}
+
+.watchlist-container{
+  height:500px;
+  overflow-y: scroll;
 }

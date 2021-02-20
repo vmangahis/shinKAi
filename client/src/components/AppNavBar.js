@@ -7,26 +7,15 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
 Container
 } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {v4 as uuidv4} from 'uuid';
-
-
 
 const AppNavBar = () => {
-
 
     const[isOpen, setIsOpen] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
-
-
 
     return (
       <>
