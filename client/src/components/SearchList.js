@@ -2,7 +2,6 @@ import {Container, Table, Button} from 'reactstrap';
 import {useEffect} from 'react';
 import {getAnime} from '../actions/AnimeAction';
 import {useDispatch} from 'react-redux';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 const SearchList = () => {
 
@@ -27,7 +26,6 @@ const SearchList = () => {
                             <th>Status</th>
                         </tr>
                     </thead>
-                    
                     <tbody>  
                             <tr>
                             <td colSpan = "5" className= "nothing">
