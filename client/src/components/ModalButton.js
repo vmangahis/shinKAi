@@ -7,6 +7,10 @@ const ModalButton = () => {
     const [modalState, setModalState] = useState(false);
 
     const toggleModal = () => setModalState(!modalState);
+
+    const getValue = (e) => {
+        console.log(e.target.value);
+    }
     
 
     return (
@@ -18,11 +22,10 @@ const ModalButton = () => {
             <Form>
                 <FormGroup>
                     <Label for="searchanime">Anime Title</Label>
-                    <Input type= "text" name="anime" id="searchanime" placeholder="Search..." />
+                    <Input type= "text" name="anime" id="searchanime" placeholder="Search..."  onChange = {(e) => getValue(e)}/>
                 </FormGroup>
             </Form>
             </ModalBody>
-
             <ModalFooter>
                 <Button color="primary" onClick = {() => setModalState(false)}>Search</Button>
                 <Button color="secondary" onClick = {() => setModalState(false)}>Cancel</Button>
