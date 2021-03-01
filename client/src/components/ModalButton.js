@@ -5,11 +5,13 @@ import {Button, Modal, ModalHeader, ModalFooter, ModalBody, Form, FormGroup, Inp
 const ModalButton = () => {
 
     const [modalState, setModalState] = useState(false);
+    const [searchState, setSearchState] = useState('');
 
     const toggleModal = () => setModalState(!modalState);
 
-    const getValue = (e) => {
-        console.log(e.target.value);
+    const getSearchValue = (e) => {
+        e.preventDefault();
+        setSearchState(e.target.value);
     }
     
 
@@ -22,12 +24,12 @@ const ModalButton = () => {
             <Form>
                 <FormGroup>
                     <Label for="searchanime">Anime Title</Label>
-                    <Input type= "text" name="anime" id="searchanime" placeholder="Search..."  onChange = {(e) => getValue(e)}/>
+                    <Input type= "text" name="anime" id="searchanime" placeholder="Search..." onChange={(e) => getSearchValue(e)} />
                 </FormGroup>
             </Form>
             </ModalBody>
             <ModalFooter>
-                <Button color="primary" onClick = {() => setModalState(false)}>Search</Button>
+                <Button color="primary" onClick = {() => {setModalState(false); console.log(`You searched for ${searchState}`)}}>Search</Button>
                 <Button color="secondary" onClick = {() => setModalState(false)}>Cancel</Button>
             </ModalFooter>
 
