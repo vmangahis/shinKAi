@@ -12,6 +12,7 @@ const SearchList = () => {
     
     const dispatch = useDispatch();
     
+    
     return (
         <>
         <Container>

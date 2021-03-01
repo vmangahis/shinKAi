@@ -1,11 +1,15 @@
 import {useState} from 'react'
 import {Button, Modal, ModalHeader, ModalFooter, ModalBody, Form, FormGroup, Input, Label} from 'reactstrap';
-
+import axios from 'axios';
+import {useDispatch} from 'react-redux';
+import {getAnime} from '../actions/AnimeAction'
 
 const ModalButton = () => {
 
     const [modalState, setModalState] = useState(false);
     const [searchState, setSearchState] = useState('');
+    const dispatch = useDispatch();
+    
 
     const toggleModal = () => setModalState(!modalState);
 
@@ -13,6 +17,17 @@ const ModalButton = () => {
         e.preventDefault();
         setSearchState(e.target.value);
     }
+
+    const searchAnime = () => {
+        axios.get(`api/anime/${searchState}`)
+        .then(response => {console.log(response.data)
+            dispatch(getAnime(response.data))
+        
+        })
+        .catch(err => console.log('error'))
+    }
+
+
     
 
     return (
@@ -29,7 +44,7 @@ const ModalButton = () => {
             </Form>
             </ModalBody>
             <ModalFooter>
-                <Button color="primary" onClick = {() => {setModalState(false); console.log(`You searched for ${searchState}`)}}>Search</Button>
+                <Button color="primary" onClick = {() => {setModalState(false); searchAnime(); }}>Search</Button>
                 <Button color="secondary" onClick = {() => setModalState(false)}>Cancel</Button>
             </ModalFooter>
 

@@ -3,11 +3,7 @@ import {GET_ANIME, DEL_ANIME, ADD_ANIME} from '../actions/types';
 
 const initialState = {
 
-    anime:[    {id:   uuidv4(), anime_title: "AOT"  , air_date: "2013-04-06T16:00:00.000+00:00 - 2013-04-06T16:00:00.000+00:00", episode: 25, status: "complete" , img_url: "https://i.imgur.com/7uOdUl5.jpg"},
-        {id:   uuidv4(), anime_title: "Chuuni" , air_date: "2013-04-06T16:00:00.000+00:00 - 2013-04-06T16:00:00.000+00:00", episode: 25, status: "complete", img_url: "https://i.imgur.com/7uOdUl5.jpg" },
-        {id:   uuidv4(), anime_title: "SAO"  , air_date: "2013-04-06T16:00:00.000+00:00 - 2013-04-06T16:00:00.000+00:00", episode: 25, status: "complete" , img_url: "https://i.imgur.com/7uOdUl5.jpg"},
-        {id:   uuidv4(), anime_title: "Anime"  , air_date: "2013-04-06T16:00:00.000+00:00 - 2013-04-06T16:00:00.000+00:00", episode: 25, status: "complete" , img_url: "https://i.imgur.com/7uOdUl5.jpg"},
-        {id:   uuidv4(), anime_title: "Anime"  , air_date: "2013-04-06T16:00:00.000+00:00 - 2013-04-06T16:00:00.000+00:00", episode: 25, status: "complete" , img_url: "https://i.imgur.com/7uOdUl5.jpg"}]
+    anime:[]
 };
 const animeReducer = (state = initialState, action) => {
     switch(action.type)
@@ -15,6 +11,7 @@ const animeReducer = (state = initialState, action) => {
         case GET_ANIME:
             return {
                 ...state, 
+                anime:[action.data]
             }
             break;
 
@@ -24,6 +21,8 @@ const animeReducer = (state = initialState, action) => {
                 anime: state.anime.filter((state) => state.id !== action.load)
             }
             break;
+
+        
 
         default:
             return state;

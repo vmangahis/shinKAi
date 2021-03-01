@@ -4,7 +4,7 @@ import{delAnime} from '../actions/AnimeAction';
 const WatchList = () => {
 
     const dispatch = useDispatch();
-    const {anime} = useSelector(state => state.anime);
+    const {anime} = useSelector(state => state);
     return (
         <div>
             <h1>Your Watchlist</h1>
@@ -22,7 +22,7 @@ const WatchList = () => {
                     </thead>
 
                     <tbody>
-                {(anime.length === 0) ? <tr><td colSpan = "5" className= "nothing">
+               {/*  {(anime.length === 0) ? <tr><td colSpan = "5" className= "nothing">
                                 <h1>Empty Watchlist...</h1>
                                  </td></tr>:anime.map(({id, anime_title, status, img_url, episode, air_date})=> (
                     <tr key={id}>
@@ -37,7 +37,7 @@ const WatchList = () => {
 
                     
                 ))}
-              
+               */}
                 </tbody>
                     
                 </Table>
