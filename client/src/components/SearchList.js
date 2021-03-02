@@ -1,14 +1,17 @@
 import {Container, Table, Button} from 'reactstrap';
-import {useEffect} from 'react';
-import {getAnime} from '../actions/AnimeAction';
-import {useDispatch} from 'react-redux';
+import {useEffect, useState} from 'react';
+import {extAnime} from '../actions/AnimeAction';
+import {useDispatch, useSelector} from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 const SearchList = () => {
 
     useEffect(() => {
-        dispatch(getAnime());
-        console.log('dispatch');
+       
+        console.log(`result: ${anime}`);
+        
     }, [])
+    const [searchState, setSearchState] = useState([]);
+    const {anime} = useSelector(state => state);
     
     const dispatch = useDispatch();
     

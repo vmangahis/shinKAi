@@ -1,5 +1,6 @@
 import {v4 as uuidv4} from 'uuid';
-import {GET_ANIME, DEL_ANIME, ADD_ANIME} from '../actions/types';
+import {GET_ANIME, DEL_ANIME, ADD_ANIME, EXT_ANIME} from '../actions/types';
+
 
 const initialState = {
 
@@ -22,7 +23,7 @@ const animeReducer = (state = initialState, action) => {
             }
             break;
 
-        
+     
 
         default:
             return state;

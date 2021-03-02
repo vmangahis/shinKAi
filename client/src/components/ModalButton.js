@@ -20,7 +20,7 @@ const ModalButton = () => {
 
     const searchAnime = () => {
         axios.get(`api/anime/${searchState}`)
-        .then(response => {console.log(response.data)
+        .then(response => {
             dispatch(getAnime(response.data))
         
         })
