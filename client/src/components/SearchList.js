@@ -4,14 +4,16 @@ import {extAnime} from '../actions/AnimeAction';
 import {useDispatch, useSelector} from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 const SearchList = () => {
+    const [searchState, setSearchState] = useState([]);
+    const animeSelector = useSelector(state => state.anime);
 
     useEffect(() => {
-       
-        console.log(`result: ${anime}`);
-        
+       setSearchState(animeSelector);
+       dispatch(extAnime());
+        console.log('searchlist use effect running');
+        console.log(searchState);
     }, [])
-    const [searchState, setSearchState] = useState([]);
-    const {anime} = useSelector(state => state);
+  
     
     const dispatch = useDispatch();
     

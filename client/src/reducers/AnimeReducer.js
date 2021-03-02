@@ -23,7 +23,11 @@ const animeReducer = (state = initialState, action) => {
             }
             break;
 
-     
+        case EXT_ANIME:
+            return{
+                ...state
+            }
+            break;
 
         default:
             return state;
