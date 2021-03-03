@@ -6,16 +6,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const SearchList = () => {
     const [searchState, setSearchState] = useState([]);
     const animeSelector = useSelector(state => state.anime);
-
-    useEffect(() => {
-       setSearchState(animeSelector);
-       dispatch(extAnime());
-        console.log('searchlist use effect running');
-        console.log(searchState);
-    }, [])
-  
-    
     const dispatch = useDispatch();
+    useEffect(() => {
+      
+       
+    }, [searchState])
     
     
     return (
@@ -32,7 +27,8 @@ const SearchList = () => {
                             <th>Status</th>
                         </tr>
                     </thead>
-                    <tbody>  
+                    <tbody> 
+                        {} 
                             <tr>
                             <td colSpan = "5" className= "nothing">
                                 <h1>Nothing was searched....</h1>
@@ -42,6 +38,7 @@ const SearchList = () => {
             </Table>
         </Container>
         </>
+        
     )
 }
 
