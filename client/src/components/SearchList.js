@@ -37,7 +37,8 @@ const SearchList = () => {
                     <tr key={anime.id}>
                         <th scope ="row"><img src ={anime.img_url} width={100} height={100}/></th>
                         <td>{anime.anime_title}</td>
-                        <td>{anime.episode}</td>
+                        <td>{anime.airstart}</td>
+                        <td>{anime.episodes}</td>
                         <td>{anime.status}</td>
                                 </tr>
                             ))} 
