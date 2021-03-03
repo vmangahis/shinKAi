@@ -12,7 +12,7 @@ const animeReducer = (state = initialState, action) => {
         case GET_ANIME:
             return {
                 ...state, 
-                anime:[action.data]
+                anime:action.data
             }
             break;
 

@@ -4,15 +4,16 @@ import {extAnime} from '../actions/AnimeAction';
 import {useDispatch, useSelector} from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 const SearchList = () => {
-    const [searchState, setSearchState] = useState([]);
-    const animeSelector = useSelector(state => state.anime);
+    
+    const {anime} = useSelector(state => state.anime);
+    const [searchState, setSearchState] = useState(anime);
     const dispatch = useDispatch();
+
     useEffect(() => {
-      
-       
-    }, [searchState])
-    
-    
+        setSearchState(state => ({...state,anime}))
+        console.log('use effect fired');
+        console.log(anime);
+    }, [anime])
     return (
         <>
         <Container>
@@ -28,17 +29,24 @@ const SearchList = () => {
                         </tr>
                     </thead>
                     <tbody> 
-                        {} 
-                            <tr>
+                        {(anime.length === 0) ?  <tr id = {0}>
                             <td colSpan = "5" className= "nothing">
                                 <h1>Nothing was searched....</h1>
                                  </td>
-                            </tr>
+                            </tr> :anime.map((anime)=> (
+                    <tr key={anime.id}>
+                        <th scope ="row"><img src ={anime.img_url} width={100} height={100}/></th>
+                        <td>{anime.anime_title}</td>
+                        <td>{anime.episode}</td>
+                        <td>{anime.status}</td>
+                                </tr>
+                            ))} 
+                            
                     </tbody>
             </Table>
         </Container>
         </>
-        
+
     )
 }
 
