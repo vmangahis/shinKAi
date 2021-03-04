@@ -6,6 +6,8 @@
 
 h1{
   text-align: center;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .table{
@@ -23,9 +25,7 @@ h1{
   
 }
 
-th{
-  min-width:218px;
-}
+
 
 .table > tbody > tr > td {
   vertical-align: middle;

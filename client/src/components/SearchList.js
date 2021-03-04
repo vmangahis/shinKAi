@@ -26,6 +26,7 @@ const SearchList = () => {
                             <th>Date Aired</th>
                             <th>Episodes</th>
                             <th>Status</th>
+                            <th>&nbsp;</th>
                         </tr>
                     </thead>
                     <tbody> 
@@ -40,6 +41,7 @@ const SearchList = () => {
                         <td>{anime.airstart}</td>
                         <td>{anime.episodes}</td>
                         <td>{anime.status}</td>
+                        <td><Button color = "primary">Add To Watchlist</Button></td>
                                 </tr>
                             ))} 
                             
