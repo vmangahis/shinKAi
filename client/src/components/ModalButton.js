@@ -21,7 +21,15 @@ const ModalButton = () => {
     const searchAnime = () => {
         axios.get(`api/anime/${searchState}`)
         .then(response => {
-            dispatch(getAnime(response.data))
+            if(response.data.length === 0)
+            {
+                console.log('empty data');
+            }
+            else{
+                console.log('data not empty');
+                dispatch(getAnime(response.data));
+            }
+            
         
         })
         .catch(err => console.log('error'))

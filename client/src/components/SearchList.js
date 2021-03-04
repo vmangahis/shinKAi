@@ -10,19 +10,24 @@ const SearchList = () => {
     const [modalPrompt, setModalPrompt] = useState(false);
     const dispatch = useDispatch();
 
-    const addToWatchList = () => {
+    const addToWatchList = (id) => {
+            console.log(id);
             setModalPrompt(!modalPrompt);
     }
 
     useEffect(() => {
         setSearchState(state => ({...state,anime}))
         console.log('use effect fired');
-        console.log(anime);
+        
     }, [anime])
     return (
         <>
         <Modal isOpen = {modalPrompt} toggle = {addToWatchList}>
             <ModalHeader toggle = {addToWatchList}>Add Anime to your Watchlist</ModalHeader>
+            <ModalBody>
+                    <h2>Add this anime to your watchlist?</h2>
+            </ModalBody>
+
             <ModalFooter>
                 <Button color = "primary" onClick = {addToWatchList}>Add To Watchlist</Button>
                 <Button color = "warning" onClick = {addToWatchList}>Cancel</Button>
@@ -47,13 +52,13 @@ const SearchList = () => {
                                 <h1>Nothing was searched....</h1>
                                  </td>
                             </tr> :anime.map((anime)=> (
-                    <tr key={anime.id}>
+                    <tr key={anime._id}>
                         <th scope ="row"><img src ={anime.img_url} width={100} height={100}/></th>
                         <td>{anime.anime_title}</td>
                         <td>{anime.airstart}</td>
                         <td>{anime.episodes}</td>
                         <td>{anime.status}</td>
-                        <td><Button color = "primary" onClick={() => addToWatchList()}>Add To Watchlist</Button></td>
+                        <td><Button color = "primary" onClick={() => addToWatchList(anime._id)}>Add To Watchlist</Button></td>
                                 </tr>
                             ))} 
                             
