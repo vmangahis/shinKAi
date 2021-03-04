@@ -20,7 +20,7 @@ mongoose.connect(uri, {useUnifiedTopology: true, useNewUrlParser: true})
 
 const que = req.params.title;
     
-        ItemModel.find({anime_title: new RegExp(que,'i')},{_id: 0}, (err, results) => {
+        ItemModel.find({anime_title: new RegExp(que,'i')}, (err, results) => {
       console.log(results);
           res.send(results);
         })
@@ -38,7 +38,7 @@ router.get("/api/anime/", (req, res) => {
     
     
         
-            ItemModel.find({},{_id: 0}, (err, results) => {
+            ItemModel.find({}, (err, results) => {
           console.log(results);
               res.send(results);
             })
