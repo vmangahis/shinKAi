@@ -1,5 +1,5 @@
 import {v4 as uuidv4} from 'uuid';
-import {GET_ANIME, DEL_ANIME, ADD_ANIME, EXT_ANIME} from '../actions/types';
+import {GET_ANIME, DEL_ANIME, ADD_ANIME, EXT_ANIME, ADD_WATCHLIST} from '../actions/types';
 
 
 const initialState = {
@@ -32,7 +32,8 @@ const animeReducer = (state = initialState, action) => {
 
         case ADD_WATCHLIST:
             return{
-                ...state
+                ...state,
+                watchlist: [state.anime.filter((state) => state._id === action.load)]
             }
             break;
 
