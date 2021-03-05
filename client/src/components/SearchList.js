@@ -13,6 +13,8 @@ const SearchList = () => {
     const addToWatchList = (id) => {
             console.log(id);
             setModalPrompt(!modalPrompt);
+            
+
     }
 
     useEffect(() => {

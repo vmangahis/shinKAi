@@ -4,7 +4,8 @@ import {GET_ANIME, DEL_ANIME, ADD_ANIME, EXT_ANIME} from '../actions/types';
 
 const initialState = {
 
-    anime:[]
+    anime:[],
+    watchlist:[]
 };
 const animeReducer = (state = initialState, action) => {
     switch(action.type)
@@ -24,6 +25,12 @@ const animeReducer = (state = initialState, action) => {
             break;
 
         case EXT_ANIME:
+            return{
+                ...state
+            }
+            break;
+
+        case ADD_WATCHLIST:
             return{
                 ...state
             }
