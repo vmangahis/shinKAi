@@ -33,7 +33,7 @@ const animeReducer = (state = initialState, action) => {
         case ADD_WATCHLIST:
             return{
                 ...state,
-                watchlist: [state.anime.filter((state) => state._id === action.load)]
+                watchlist: state.anime.filter((data) => data._id === action.load)
             }
             break;
 

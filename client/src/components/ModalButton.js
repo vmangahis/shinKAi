@@ -28,6 +28,7 @@ const ModalButton = () => {
             else{
                 console.log('data not empty');
                 dispatch(getAnime(response.data));
+                
             }
             
         

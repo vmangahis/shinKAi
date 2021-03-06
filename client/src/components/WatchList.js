@@ -7,11 +7,14 @@ const WatchList = () => {
     const dispatch = useDispatch();
     const {watchlist} = useSelector(state => state.anime);
     const [watch, setWatch] = useState(watchlist);
-    
-  
-
     useEffect(() => {
-       setWatch(state => ({...state, watchlist})); 
+       if(watchlist.length > 0) {
+        setWatch(state =>([...state, watchlist])); 
+       }
+
+       
+       console.log(watch.length);
+       console.log(`Anime Title ${watch.anime_title}`);
     }, [watchlist]);
     return (
         <div>
@@ -29,8 +32,28 @@ const WatchList = () => {
                         </tr>
                     </thead>
 
-                    <tbody>
-            
+                <tbody>
+                    {(watch.length === 0) ? <tr key = {0}>
+                    <td colSpan = "5" className= "nothing">
+                                <h1>Empty Watchlist....</h1>
+                                 </td>
+                    </tr> : watch.map(an =>
+                        
+                    an.map(items => <> 
+                    
+                    <tr key = {items._id}>
+                            <th><img src ={items.img_url} /></th>
+                            <td>{items.anime_title}</td>
+                            <td>{items.status}</td>
+                            <td>{items.episodes}</td>
+                            <td><Button color = "primary">Remove</Button></td>
+
+
+                    </tr>
+                    
+                    </>)    
+                    
+                    )}
                 </tbody>
                     
                 </Table>

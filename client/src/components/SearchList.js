@@ -8,16 +8,18 @@ const SearchList = () => {
     const {anime} = useSelector(state => state.anime);
     const [searchState, setSearchState] = useState(anime);
     const [modalPrompt, setModalPrompt] = useState(false);
+    const [selectedAnime, setSelectedAnime] = useState("");
     const dispatch = useDispatch();
 
-    const addToWatchList = () => {
+    const addToWatchList = idSelected => {
             
             setModalPrompt(!modalPrompt);
-            
+            setSelectedAnime(idSelected);
 
     }
 
     const addWatch = (id)  => {
+        console.log(`clicked id ${id}`);
         dispatch(addWatchlist(id));
         setModalPrompt(!modalPrompt);
     }
@@ -49,33 +51,42 @@ const SearchList = () => {
                                 <h1>Nothing was searched....</h1>
                                  </td>
                             </tr> :anime.map((anime)=> (
+
                                 <>
-                                
+                                                  
                     <tr key={anime._id}>
+                        {console.log(`id of : ${anime._id}`)}
                         <th scope ="row"><img src ={anime.img_url} width={100} height={100}/></th>
                         <td>{anime.anime_title}</td>
                         <td>{anime.airstart}</td>
                         <td>{anime.episodes}</td>
                         <td>{anime.status}</td>
-                        <td><Button color = "primary" onClick={() => addToWatchList()}>Add To Watchlist</Button></td>
+                        <td><Button color = "primary" onClick={() => addToWatchList(anime._id)}>Add To Watchlist</Button></td>
+                        
                                 </tr>
 
-                                <Modal isOpen = {modalPrompt} toggle = {addToWatchList}>
-            <ModalHeader toggle = {addToWatchList}>Add Anime to your Watchlist</ModalHeader>
-            <ModalBody>
-                    <h2>Add this anime to your watchlist?</h2>
-            </ModalBody>
+                             
 
-            <ModalFooter>
-                <Button color = "primary" onClick = {() => addWatch(anime._id)}>Add To Watchlist</Button>
-                <Button color = "warning" onClick = {addToWatchList}>Cancel</Button>
-            </ModalFooter>
-            </Modal>
+                               
                             </>    
                             ))} 
                             
                     </tbody>
             </Table>
+
+            <Modal isOpen = {modalPrompt} toggle = {addToWatchList}>
+                        <ModalHeader toggle = {addToWatchList}>Add Anime to your Watchlist</ModalHeader>
+                        <ModalBody>
+                    <h2>Add this anime to your watchlist?</h2>
+            </ModalBody>
+
+            <ModalFooter>
+                <Button color = "primary" onClick = {() => addWatch(selectedAnime)}>Add To Watchlist</Button>
+                <Button color = "warning" onClick = {addToWatchList}>Cancel</Button>
+            </ModalFooter>
+            </Modal>  
+
+            
         </Container>
         </>
 
