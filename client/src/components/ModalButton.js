@@ -23,17 +23,15 @@ const ModalButton = () => {
         .then(response => {
             if(response.data.length === 0)
             {
-                console.log('empty data');
+                
             }
             else{
-                console.log('data not empty');
-                dispatch(getAnime(response.data));
-                
+                dispatch(getAnime(response.data));                
             }
             
         
         })
-        .catch(err => console.log('error'))
+        .catch(err => console.log(err))
     }
 
 

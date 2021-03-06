@@ -19,15 +19,13 @@ const SearchList = () => {
     }
 
     const addWatch = (id)  => {
-        console.log(`clicked id ${id}`);
+        
         dispatch(addWatchlist(id));
         setModalPrompt(!modalPrompt);
     }
 
     useEffect(() => {
         setSearchState(state => ({...state,anime}))
-        console.log('use effect fired');
-        
     }, [anime])
     return (
         <>
@@ -55,7 +53,6 @@ const SearchList = () => {
                                 <>
                                                   
                     <tr key={anime._id}>
-                        {console.log(`id of : ${anime._id}`)}
                         <th scope ="row"><img src ={anime.img_url} width={100} height={100}/></th>
                         <td>{anime.anime_title}</td>
                         <td>{anime.airstart}</td>

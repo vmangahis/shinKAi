@@ -11,10 +11,6 @@ const WatchList = () => {
        if(watchlist.length > 0) {
         setWatch(state =>([...state, watchlist])); 
        }
-
-       
-       console.log(watch.length);
-       console.log(`Anime Title ${watch.anime_title}`);
     }, [watchlist]);
     return (
         <div>
