@@ -34,9 +34,6 @@ const ModalButton = () => {
         .catch(err => console.log(err))
     }
 
-
-    
-
     return (
         <div>
             <Button color = "primary" onClick = {() => setModalState(!modalState)}>Search Anime</Button>
