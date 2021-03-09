@@ -60,11 +60,7 @@ const SearchList = () => {
                         <td>{anime.status}</td>
                         <td><Button color = "primary" onClick={() => addToWatchList(anime._id)}>Add To Watchlist</Button></td>
                         
-                                </tr>
-
-                             
-
-                               
+                                </tr>                               
                             </>    
                             ))} 
                             
