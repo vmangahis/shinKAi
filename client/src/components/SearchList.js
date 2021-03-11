@@ -49,17 +49,14 @@ const SearchList = () => {
                                 <h1>Nothing was searched....</h1>
                                  </td>
                             </tr> :anime.map((anime)=> (
-
                                 <>
-                                                  
                     <tr key={anime._id}>
                         <th scope ="row"><img src ={anime.img_url} width={100} height={100}/></th>
                         <td>{anime.anime_title}</td>
                         <td>{anime.airstart}</td>
                         <td>{anime.episodes}</td>
                         <td>{anime.status}</td>
-                        <td><Button color = "primary" onClick={() => addToWatchList(anime._id)}>Add To Watchlist</Button></td>
-                        
+                        <td><Button color = "primary" onClick={() => addToWatchList(anime._id)}>Add To Watchlist</Button></td>        
                                 </tr>                               
                             </>    
                             ))} 
