@@ -15,7 +15,8 @@ function App() {
     <div>
     
     <AppNavBar />
-    <ModalButton />
+    {//<ModalButton />
+    }
     <SearchList />
     <WatchList />
     </div>    

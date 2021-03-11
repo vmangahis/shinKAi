@@ -1,13 +1,21 @@
-import {Container, Table, Button, Modal, ModalBody, ModalFooter, ModalHeader} from 'reactstrap';
+import {Container, Table, Button, Modal, ModalBody, ModalFooter, ModalHeader,
+FormGroup, Form, Input
+
+
+
+} from 'reactstrap';
 import {useEffect, useState} from 'react';
 import {addWatchlist} from '../actions/AnimeAction';
 import {useDispatch, useSelector} from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from 'axios';
+
 const SearchList = () => {
     
     const {anime} = useSelector(state => state.anime);
     const [searchState, setSearchState] = useState(anime);
     const [modalPrompt, setModalPrompt] = useState(false);
+    const [searchQuery, setQuery] = useState("");
     const [selectedAnime, setSelectedAnime] = useState("");
     const dispatch = useDispatch();
 
@@ -24,11 +32,34 @@ const SearchList = () => {
         setModalPrompt(!modalPrompt);
     }
 
+    const searchAnime = () => {
+        axios.get(`/api/anime/${searchQuery}`)
+        .then(response => console.log(response.data))
+        .catch(err => console.log(err));
+    }
+
+    
+
     useEffect(() => {
         setSearchState(state => ({...state,anime}))
     }, [anime])
     return (
         <>
+        <Container>
+            <Form onSubmit ={(e) => { e.preventDefault();
+                console.log("Submitted " + searchQuery)
+                searchAnime();
+            }}>
+                <FormGroup className = "search-form">
+                <Input type = "text" className = "search-bar" onChange={(e) => {
+                    
+                    setQuery(e.target.value)} }/>
+                <Button type = "submit" color = "primary">Search...</Button>
+                <Button  color = "secondary">Clear</Button>
+                </FormGroup>
+            </Form>
+        </Container>
+
         
         <Container>
             <h1>Search Table</h1>

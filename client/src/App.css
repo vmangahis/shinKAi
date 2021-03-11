@@ -51,3 +51,18 @@ img{
   overflow-y: scroll;
   overflow:auto;
 }
+
+
+.search-form{
+  padding: 20px 0;
+  display:flex;
+  justify-content: center;
+}
+.search-form > Input{
+  width:50%;
+  margin-right: 15px;
+}
+
+.search-form > Button{
+  margin-right:10px;
+}
