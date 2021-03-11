@@ -6,9 +6,6 @@ const cors = require('cors');
 const api = require('./routes/api/index');
 const PORT = process.env.PORT || 5000;
 
-
-//connect to db
-
 app.use(api)
 
 

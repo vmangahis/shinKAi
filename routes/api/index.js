@@ -12,7 +12,8 @@ router.get("/api/anime/:title", (req, res) => {
 
 mongoose.connect(uri, {useUnifiedTopology: true, useNewUrlParser: true})
 .then(() => {
-    console.log('Api route connected to db');
+    
+    console.log(`Searched for: ${req.params.title}`)
 })
 .catch((err) => {
     console.log(err);
@@ -21,7 +22,7 @@ mongoose.connect(uri, {useUnifiedTopology: true, useNewUrlParser: true})
 const que = req.params.title;
     
         ItemModel.find({anime_title: new RegExp(que,'i')}, (err, results) => {
-      console.log(results);
+    
           res.send(results);
         })
 })
@@ -30,7 +31,7 @@ router.get("/api/anime/", (req, res) => {
 
     mongoose.connect(uri, {useUnifiedTopology: true, useNewUrlParser: true})
     .then(() => {
-        console.log('Api route connected to db');
+        console.log('Blank search.');
     })
     .catch((err) => {
         console.log(err);
@@ -39,7 +40,6 @@ router.get("/api/anime/", (req, res) => {
     
         
             ItemModel.find({}, (err, results) => {
-          console.log(results);
               res.send(results);
             })
     })

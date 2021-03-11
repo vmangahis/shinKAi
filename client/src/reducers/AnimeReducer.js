@@ -20,7 +20,7 @@ const animeReducer = (state = initialState, action) => {
         case DEL_ANIME:
             return{
                 ...state,
-                anime: state.anime.filter((state) => state.id !== action.load)
+                
             }
             break;
 
@@ -33,7 +33,8 @@ const animeReducer = (state = initialState, action) => {
         case ADD_WATCHLIST:
             return{
                 ...state,
-                watchlist: state.anime.filter((data) => data._id === action.load)
+                watchlist: state.anime.filter((data) => data._id === action.load),
+                anime: state.anime.filter((state) => state._id !== action.load)
             }
             break;
 
