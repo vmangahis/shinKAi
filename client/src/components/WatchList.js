@@ -7,11 +7,20 @@ const WatchList = () => {
     const dispatch = useDispatch();
     const {watchlist} = useSelector(state => state.anime);
     const [watch, setWatch] = useState(watchlist);
+
+    const removeWatchlist = () => {
+        
+    }
+
     useEffect(() => {
        if(watchlist.length > 0) {
         setWatch(state =>([...state, watchlist])); 
        }
     }, [watchlist]);
+
+
+
+
     return (
         <div>
             <h1>Your Watchlist</h1>
@@ -42,7 +51,7 @@ const WatchList = () => {
                             <td>{items.anime_title}</td>
                             <td>{items.status}</td>
                             <td>{items.episodes}</td>
-                            <td><Button color = "primary">Remove</Button></td>
+                            <td><Button color = "primary" onClick = {console.log('hello')}>Remove</Button></td>
 
 
                     </tr>
