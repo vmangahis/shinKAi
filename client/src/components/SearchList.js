@@ -1,12 +1,10 @@
 import {Container, Table, Button, Modal, ModalBody, ModalFooter, ModalHeader,
 FormGroup, Form, Input
-
-
-
 } from 'reactstrap';
 import {useEffect, useState} from 'react';
 import {addWatchlist} from '../actions/AnimeAction';
 import {useDispatch, useSelector} from 'react-redux';
+import {getAnime} from '../actions/AnimeAction'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
@@ -23,10 +21,9 @@ const SearchList = () => {
             
             setModalPrompt(!modalPrompt);
             setSelectedAnime(idSelected);
-
     }
 
-    const addWatch = (id)  => {
+    const addWatch = id  => {
         
         dispatch(addWatchlist(id));
         setModalPrompt(!modalPrompt);
@@ -34,7 +31,7 @@ const SearchList = () => {
 
     const searchAnime = () => {
         axios.get(`/api/anime/${searchQuery}`)
-        .then(response => console.log(response.data))
+        .then(response => dispatch(getAnime(response.data)))
         .catch(err => console.log(err));
     }
 

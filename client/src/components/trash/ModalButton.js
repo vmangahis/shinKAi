@@ -2,7 +2,7 @@ import {useState} from 'react'
 import {Button, Modal, ModalHeader, ModalFooter, ModalBody, Form, FormGroup, Input, Label} from 'reactstrap';
 import axios from 'axios';
 import {useDispatch} from 'react-redux';
-import {getAnime} from '../actions/AnimeAction'
+import {getAnime} from '../../actions/AnimeAction'
 
 const ModalButton = () => {
 
