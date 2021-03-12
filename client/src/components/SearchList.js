@@ -49,10 +49,9 @@ const SearchList = () => {
             }}>
                 <FormGroup className = "search-form">
                 <Input type = "text" className = "search-bar" onChange={(e) => {
-                    
-                    setQuery(e.target.value)} }/>
+                    setQuery(e.target.value)} } placeholder = "Search here..."/>
                 <Button type = "submit" color = "primary">Search...</Button>
-                <Button  color = "secondary">Clear</Button>
+                <Button  color = "secondary" type= "reset" >Clear</Button>
                 </FormGroup>
             </Form>
         </Container>
