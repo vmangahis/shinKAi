@@ -29,11 +29,11 @@ const WatchList = () => {
                 <Table dark={true} className = "table">
                     <thead className ="table-header" color="dark">
                         <tr>
-                            <th></th>
+                            <th>&nbsp;</th>
                             <th>Title</th>
                             <th>Episodes</th>
                             <th>Status</th>
-                            <th></th>
+                            <th>&nbsp;</th>
                         </tr>
                     </thead>
 

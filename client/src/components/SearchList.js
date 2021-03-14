@@ -67,12 +67,12 @@ const SearchList = () => {
                             <th>Date Aired</th>
                             <th>Episodes</th>
                             <th>Status</th>
-                            <th>&nbsp;</th>
+                            <th width={200}>&nbsp;</th>
                         </tr>
                     </thead>
                     <tbody> 
                         {(anime.length === 0) ?  <tr id = {0}>
-                            <td colSpan = "5" className= "nothing">
+                            <td colSpan = "6" className= "nothing">
                                 <h1>Nothing was searched....</h1>
                                  </td>
                             </tr> :anime.map((anime)=> (
@@ -83,7 +83,7 @@ const SearchList = () => {
                         <td>{anime.airstart}</td>
                         <td>{anime.episodes}</td>
                         <td>{anime.status}</td>
-                        <td><Button color = "primary" onClick={() => addToWatchList(anime._id)}>Add To Watchlist</Button></td>        
+                        <td><Button className = "addtoWatchlist" color = "primary" onClick={() => addToWatchList(anime._id)}>Add To Watchlist</Button></td>        
                                 </tr>                               
                             </>    
                             ))} 

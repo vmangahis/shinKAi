@@ -30,6 +30,10 @@ img{
   
 }
 
+.header-row, .addtoWatchlist{
+  width:200px;
+}
+
 
 
 .table > tbody > tr > td {
@@ -37,13 +41,13 @@ img{
 }
 
 .nothing{
-  padding:40px;
+  padding:40px 0;
   text-align: center;
 }
 
 
 .nothing > h1{
-  padding:40px;
+  padding: 40px 0;
 }
 
 .watchlist-container{
