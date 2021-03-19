@@ -62,12 +62,12 @@ const SearchList = () => {
             <Table dark responsive>
                     <thead>
                         <tr>
-                            <th width={200}>&nbsp;</th>
+                            <th className = "empty-header">&nbsp;</th>
                             <th>Title</th>
                             <th>Date Aired</th>
                             <th>Episodes</th>
                             <th>Status</th>
-                            <th width={200}>&nbsp;</th>
+                            <th className = "empty-header"width={250}>&nbsp;</th>
                         </tr>
                     </thead>
                     <tbody> 
@@ -102,8 +102,6 @@ const SearchList = () => {
                 <Button color = "warning" onClick = {addToWatchList}>Cancel</Button>
             </ModalFooter>
             </Modal>  
-
-            
         </Container>
         </>
 

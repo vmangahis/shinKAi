@@ -15,11 +15,24 @@ img{
   height:200px;
 }
 
+th{
+  min-width:162px;
+}
+
 .table{
   text-align: center;
   position: relative;
   
   
+}
+
+Table > th{
+  padding:0;
+}
+
+.empty-header{
+  width:224px;
+  padding:0;
 }
 
 .table-header > tr > th{
@@ -33,6 +46,8 @@ img{
 .header-row, .addtoWatchlist{
   width:200px;
 }
+
+
 
 
 
