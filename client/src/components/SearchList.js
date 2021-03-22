@@ -22,7 +22,6 @@ const SearchList = () => {
             setModalPrompt(!modalPrompt);
             setSelectedAnime(idSelected);
     }
-
     const addWatch = id  => {
         
         dispatch(addWatchlist(id));
@@ -56,7 +55,6 @@ const SearchList = () => {
             </Form>
         </Container>
 
-        
         <Container>
             <h1>Search Table</h1>
             <Table dark responsive>
