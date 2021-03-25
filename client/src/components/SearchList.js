@@ -16,7 +16,6 @@ const SearchList = () => {
     const [searchQuery, setQuery] = useState("");
     const [selectedAnime, setSelectedAnime] = useState("");
     const dispatch = useDispatch();
-
     const addToWatchList = idSelected => {
             
             setModalPrompt(!modalPrompt);
