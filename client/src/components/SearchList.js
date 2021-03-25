@@ -34,8 +34,6 @@ const SearchList = () => {
         .catch(err => console.log(err));
     }
 
-    
-
     useEffect(() => {
         setSearchState(state => ({...state,anime}))
     }, [anime])
