@@ -49,7 +49,6 @@ const SearchList = () => {
                 </FormGroup>
             </Form>
         </Container>
-
         <Container>
             <h1>Search Table</h1>
             <Table dark responsive>
@@ -101,4 +100,4 @@ const SearchList = () => {
     )
 }
 
-export default SearchList
+export default SearchList;
