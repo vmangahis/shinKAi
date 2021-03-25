@@ -27,13 +27,11 @@ const SearchList = () => {
         dispatch(addWatchlist(id));
         setModalPrompt(!modalPrompt);
     }
-
     const searchAnime = () => {
         axios.get(`/api/anime/${searchQuery}`)
         .then(response => dispatch(getAnime(response.data)))
         .catch(err => console.log(err));
     }
-
     useEffect(() => {
         setSearchState(state => ({...state,anime}))
     }, [anime])
