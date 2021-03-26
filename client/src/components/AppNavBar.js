@@ -38,4 +38,4 @@ const AppNavBar = () => {
     )
 }
 
-export default AppNavBar
+export default AppNavBar;

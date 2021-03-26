@@ -18,7 +18,6 @@ mongoose.connect(uri, {useUnifiedTopology: true, useNewUrlParser: true})
 .catch((err) => {
     console.log(err);
 });
-
 const que = req.params.title;
     
         ItemModel.find({anime_title: new RegExp(que,'i')}, (err, results) => {
