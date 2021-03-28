@@ -7,8 +7,6 @@ const api = require('./routes/api/index');
 const PORT = process.env.PORT || 5000;
 
 app.use(api)
-
-
 app.use(exp.json());
 
 app.get('/', (req, res) =>{
