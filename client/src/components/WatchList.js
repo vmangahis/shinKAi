@@ -49,8 +49,8 @@ const WatchList = () => {
                     <tr key = {items._id}>
                             <th><img src ={items.img_url} /></th>
                             <td>{items.anime_title}</td>
-                            <td>{items.status}</td>
                             <td>{items.episodes}</td>
+                            <td>{items.status}</td>
                             <td><Button color = "primary" onClick = {console.log('hello')}>Remove</Button></td>
 
 
