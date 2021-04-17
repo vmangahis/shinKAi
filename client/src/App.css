@@ -47,10 +47,6 @@ Table > th{
   width:200px;
 }
 
-
-
-
-
 .table > tbody > tr > td {
   vertical-align: middle;
 }
@@ -85,3 +81,4 @@ Table > th{
 .search-form > Button{
   margin-right:10px;
 }
+

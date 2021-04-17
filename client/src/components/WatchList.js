@@ -19,8 +19,6 @@ const WatchList = () => {
     }, [watchlist]);
 
 
-
-
     return (
         <div>
             <h1>Your Watchlist</h1>
@@ -52,8 +50,6 @@ const WatchList = () => {
                             <td>{items.episodes}</td>
                             <td>{items.status}</td>
                             <td><Button color = "primary" onClick = {console.log('hello')}>Remove</Button></td>
-
-
                     </tr>
                     
                     </>)    
