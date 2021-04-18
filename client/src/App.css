@@ -1,13 +1,13 @@
+/* Global Styling*/
+
 *{
-  box-sizing: border-box;
-  padding:0;
+  padding : 0;
   margin:0;
+  box-sizing: border-box;
 }
 
 h1{
   text-align: center;
-  margin-left:auto;
-  margin-right:auto;
 }
 
 img{
@@ -15,70 +15,45 @@ img{
   height:200px;
 }
 
-th{
-  min-width:162px;
+td{
+  padding:0;
 }
 
-.table{
+tbody > tr > td, tbody > tr > th {
   text-align: center;
-  position: relative;
-  
-  
-}
-
-Table > th{
+  vertical-align: middle;
   padding:0;
 }
 
-.empty-header{
-  width:224px;
-  padding:0;
+.table-header{
+  background-color: black;
+  position: sticky;
+  left:0;
 }
 
 .table-header > tr > th{
-  position:sticky;
-  top:0;
-  background-color:black;
- border-bottom:5px solid gray;
+  text-align: center;
   
 }
 
-.header-row, .addtoWatchlist{
-  width:200px;
-}
-
-.table > tbody > tr > td {
-  vertical-align: middle;
-}
-
-.nothing{
-  padding:40px 0;
-  text-align: center;
-}
 
 
-.nothing > h1{
-  padding: 40px 0;
-}
 
-.watchlist-container{
-  height:500px;
-  overflow-y: scroll;
-  overflow:auto;
-}
-
+/* Local Styling */
 
 .search-form{
-  padding: 20px 0;
-  display:flex;
+  display:flex; 
   justify-content: center;
-}
-.search-form > Input{
-  width:50%;
-  margin-right: 15px;
+  margin-top: 20px;
 }
 
 .search-form > Button{
   margin-right:10px;
 }
+
+.search-bar{
+  flex-basis:50%;
+  margin-right:10px;
+}
+
 

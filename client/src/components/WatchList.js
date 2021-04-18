@@ -22,8 +22,7 @@ const WatchList = () => {
     return (
         <div>
             <h1>Your Watchlist</h1>
-            <Container className = "watchlist-container">
-                
+            <Container className = "watchlist-container">      
                 <Table dark={true} className = "table">
                     <thead className ="table-header" color="dark">
                         <tr>
@@ -45,7 +44,7 @@ const WatchList = () => {
                     an.map(items => <> 
                     
                     <tr key = {items._id}>
-                            <th><img src ={items.img_url} /></th>
+                            <th scope = "row"><img src ={items.img_url} /></th>
                             <td>{items.anime_title}</td>
                             <td>{items.episodes}</td>
                             <td>{items.status}</td>

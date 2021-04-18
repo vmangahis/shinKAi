@@ -64,22 +64,21 @@ const SearchList = () => {
                     <thead className = "table-header">
                         <tr>
                             <th className = "empty-header">&nbsp;</th>
-                            <th>Title</th>
-                            
+                            <th>Title</th>              
                             <th>Episodes</th>
                             <th>Status</th>
-                            <th className = "empty-header"width={250}>&nbsp;</th>
+                            <th className = "empty-header">&nbsp;</th>
                         </tr>
                     </thead>
                     <tbody> 
                         {(anime.length === 0) ?  <tr id = {0}>
-                            <td colSpan = "5" className= "nothing">
+                            <td colSpan = "6" className= "nothing">
                                 <h1>Nothing was searched....</h1>
                                  </td>
                             </tr> :anime.map((anime)=> (
                                 <>
                     <tr key={anime._id}>
-                        <th scope ="row"><img src ={anime.img_url} width={100} height={100}/></th>
+                        <th scope ="row"><img src ={anime.img_url}/></th>
                         <td>{anime.anime_title}</td>
                         <td>{anime.episodes}</td>
                         <td>{anime.status}</td>
