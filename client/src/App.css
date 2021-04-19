@@ -15,15 +15,27 @@ img{
   height:200px;
 }
 
-td{
-  padding:0;
-}
+
+
 
 tbody > tr > td, tbody > tr > th {
   text-align: center;
   vertical-align: middle;
   padding:0;
+  max-width: 200px;
+  min-width:100px;
 }
+
+
+
+.table .header{
+  
+  padding:0;
+  width:144px;
+  vertical-align: middle;
+}
+
+
 
 .table-header{
   background-color: black;
@@ -31,10 +43,20 @@ tbody > tr > td, tbody > tr > th {
   left:0;
 }
 
+.empty-header{
+  min-width:317px;
+  width:317px;
+  margin:0;
+}
+
+
 .table-header > tr > th{
   text-align: center;
+  vertical-align: middle;
   
 }
+
+
 
 
 
@@ -54,6 +76,10 @@ tbody > tr > td, tbody > tr > th {
 .search-bar{
   flex-basis:50%;
   margin-right:10px;
+}
+
+.table td, .table tr{
+  vertical-align: middle;
 }
 
 

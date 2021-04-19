@@ -26,11 +26,11 @@ const WatchList = () => {
                 <Table dark={true} className = "table">
                     <thead className ="table-header" color="dark">
                         <tr>
-                            <th>&nbsp;</th>
-                            <th>Title</th>
-                            <th>Episodes</th>
-                            <th>Status</th>
-                            <th>&nbsp;</th>
+                            <th className="empty-header">&nbsp;</th>
+                            <th className = "header">Title</th>
+                            <th className = "header">Episodes</th>
+                            <th className = "header">Status</th>
+                            <th className="empty-header">&nbsp;</th>
                         </tr>
                     </thead>
 
@@ -41,17 +41,17 @@ const WatchList = () => {
                                  </td>
                     </tr> : watch.map(an =>
                         
-                    an.map(items => <> 
+                    an.map(items =>  
                     
                     <tr key = {items._id}>
                             <th scope = "row"><img src ={items.img_url} /></th>
-                            <td>{items.anime_title}</td>
-                            <td>{items.episodes}</td>
-                            <td>{items.status}</td>
-                            <td><Button color = "primary" onClick = {console.log('hello')}>Remove</Button></td>
+                            <td className = "header">{items.anime_title}</td>
+                            <td className = "header">{items.episodes}</td>
+                            <td className = "header">{items.status}</td>
+                            <td className = "header"><Button color = "primary" onClick = {console.log('hello')}>Remove</Button></td>
                     </tr>
                     
-                    </>)    
+                    )    
                     
                     )}
                 </tbody>

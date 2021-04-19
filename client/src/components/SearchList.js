@@ -5,7 +5,7 @@ import {useEffect, useState} from 'react';
 import {addWatchlist} from '../actions/AnimeAction';
 import {useDispatch, useSelector} from 'react-redux';
 import {getAnime} from '../actions/AnimeAction'
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import axios from 'axios';
 
 const SearchList = () => {
@@ -62,29 +62,29 @@ const SearchList = () => {
             <h1>Search Table</h1>
             <Table dark responsive className = "dark table" >
                     <thead className = "table-header">
-                        <tr>
+                        <tr key = {1}>
                             <th className = "empty-header">&nbsp;</th>
-                            <th>Title</th>              
-                            <th>Episodes</th>
-                            <th>Status</th>
+                            <th className = "header">Title</th>              
+                            <th className = "header">Episodes</th>
+                            <th className = "header">Status</th>
                             <th className = "empty-header">&nbsp;</th>
                         </tr>
                     </thead>
                     <tbody> 
-                        {(anime.length === 0) ?  <tr id = {0}>
+                        {(anime.length === 0) ?  <tr key = {0}>
                             <td colSpan = "6" className= "nothing">
                                 <h1>Nothing was searched....</h1>
                                  </td>
                             </tr> :anime.map((anime)=> (
-                                <>
-                    <tr key={anime._id}>
+                                
+                    <tr key={anime._id} >
                         <th scope ="row"><img src ={anime.img_url}/></th>
-                        <td>{anime.anime_title}</td>
-                        <td>{anime.episodes}</td>
-                        <td>{anime.status}</td>
-                        <td><Button className = "addtoWatchlist" color = "primary" onClick={() => addToWatchList(anime._id)}>Add To Watchlist</Button></td>        
+                        <td className = "header">{anime.anime_title}</td>
+                        <td className = "header">{anime.episodes}</td>
+                        <td className = "header">{anime.status}</td>
+                        <td className = "header"><Button className = "addtoWatchlist" color = "primary" onClick={() => addToWatchList(anime._id)}>Add To Watchlist</Button></td>        
                                 </tr>                               
-                            </>    
+                             
                             ))} 
                             
                     </tbody>

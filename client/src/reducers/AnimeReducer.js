@@ -13,7 +13,8 @@ const animeReducer = (state = initialState, action) => {
         case GET_ANIME:
             return {
                 ...state, 
-                anime:action.data
+                anime:action.data.filter((list) => list._id !== state.watchlist._id)
+                
             }
             break;
 
