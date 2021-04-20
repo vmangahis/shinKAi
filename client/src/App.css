@@ -28,6 +28,19 @@ tbody > tr > td, tbody > tr > th {
 
 
 
+
+
+
+
+
+
+/* Local Styling */
+
+.empty-placeholder{
+  margin:50px;
+}
+
+
 .table .header{
   
   padding:0;
@@ -56,12 +69,6 @@ tbody > tr > td, tbody > tr > th {
   
 }
 
-
-
-
-
-
-/* Local Styling */
 
 .search-form{
   display:flex; 

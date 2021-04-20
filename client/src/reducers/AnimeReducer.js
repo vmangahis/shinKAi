@@ -13,7 +13,7 @@ const animeReducer = (state = initialState, action) => {
         case GET_ANIME:
             return {
                 ...state, 
-                anime:action.data.filter((list) => list._id !== state.watchlist._id)
+                anime: state.watchlist.length === 0 ? action.data : state.watchlist.filter((listData) => state.anime.includes(listData))  
                 
             }
             break;

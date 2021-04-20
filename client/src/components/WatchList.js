@@ -37,7 +37,7 @@ const WatchList = () => {
                 <tbody>
                     {(watch.length === 0) ? <tr key = {0}>
                     <td colSpan = "5" className= "nothing">
-                                <h1>Empty Watchlist....</h1>
+                                <h1 className = "empty-placeholder">Empty Watchlist....</h1>
                                  </td>
                     </tr> : watch.map(an =>
                         

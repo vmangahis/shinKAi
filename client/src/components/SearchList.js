@@ -73,7 +73,7 @@ const SearchList = () => {
                     <tbody> 
                         {(anime.length === 0) ?  <tr key = {0}>
                             <td colSpan = "6" className= "nothing">
-                                <h1>Nothing was searched....</h1>
+                                <h1 className = "empty-placeholder">Nothing was searched....</h1>
                                  </td>
                             </tr> :anime.map((anime)=> (
                                 
