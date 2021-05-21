@@ -60,7 +60,10 @@ const SearchList = () => {
         </Container>
         <Container>
             <h1>Search Table</h1>
-            <Table dark responsive className = "dark table" >
+            
+            
+            <Table dark responsive className = "dark table">
+            
                     <thead className = "table-header">
                         <tr key = {1}>
                             <th className = "empty-header">&nbsp;</th>
@@ -71,6 +74,7 @@ const SearchList = () => {
                         </tr>
                     </thead>
                     <tbody> 
+                    
                         {(anime.length === 0) ?  <tr key = {0}>
                             <td colSpan = "6" className= "nothing">
                                 <h1 className = "empty-placeholder">Nothing was searched....</h1>
@@ -78,7 +82,7 @@ const SearchList = () => {
                             </tr> :anime.map((anime)=> (
                                 
                     <tr key={anime._id} >
-                        <th scope ="row"><img src ={anime.img_url}/></th>
+                        <td scope ="row"><img src ={anime.img_url}/></td>
                         <td className = "header">{anime.anime_title}</td>
                         <td className = "header">{anime.episodes}</td>
                         <td className = "header">{anime.status}</td>
@@ -86,9 +90,12 @@ const SearchList = () => {
                                 </tr>                               
                              
                             ))} 
-                            
+                      
                     </tbody>
+                    
             </Table>
+            
+            
 
             <Modal isOpen = {modalPrompt} toggle = {addToWatchList}>
                         <ModalHeader toggle = {addToWatchList}>Add Anime to your Watchlist</ModalHeader>

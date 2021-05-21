@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body{
+  overflow:hidden;
+}
+
 h1{
   text-align: center;
 }
@@ -34,10 +38,45 @@ tbody > tr > td, tbody > tr > th {
 
 
 
+
+
+
+
+
 /* Local Styling */
+
+
+
+.dark{
+  position: relative;
+   
+ }
+
+ .dark > th{
+   position:sticky;
+   top:0;
+   right:0;
+   bottom:0;
+   left:0;
+ }
+ 
+
+
+.table-div{
+  display:flex;
+  flex-direction: column;
+  max-height: 260px;
+  
+  
+}
+
 
 .empty-placeholder{
   margin:50px;
+}
+
+.table-header{
+  background-color: black;
 }
 
 
@@ -50,11 +89,8 @@ tbody > tr > td, tbody > tr > th {
 
 
 
-.table-header{
-  background-color: black;
-  position: sticky;
-  left:0;
-}
+
+
 
 .empty-header{
   min-width:317px;
@@ -88,5 +124,7 @@ tbody > tr > td, tbody > tr > th {
 .table td, .table tr{
   vertical-align: middle;
 }
+
+
 
 

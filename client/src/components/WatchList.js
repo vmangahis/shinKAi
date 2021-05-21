@@ -8,8 +8,8 @@ const WatchList = () => {
     const {watchlist} = useSelector(state => state.anime);
     const [watch, setWatch] = useState(watchlist);
 
-    const removeWatchlist = () => {
-        
+    const removeWatchlist = (id) => {
+        console.log(id);
     }
 
     useEffect(() => {
@@ -48,7 +48,7 @@ const WatchList = () => {
                             <td className = "header">{items.anime_title}</td>
                             <td className = "header">{items.episodes}</td>
                             <td className = "header">{items.status}</td>
-                            <td className = "header"><Button color = "primary" onClick = {console.log('hello')}>Remove</Button></td>
+                            <td className = "header"><Button color = "primary" onClick = {() => removeWatchlist(items._id)} >Remove</Button></td>
                     </tr>
                     
                     )    

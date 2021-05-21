@@ -21,7 +21,7 @@ const animeReducer = (state = initialState, action) => {
         case DEL_ANIME:
             return{
                 ...state,
-                
+               
             }
             break;
 
