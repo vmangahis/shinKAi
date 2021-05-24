@@ -11,13 +11,12 @@ const WatchList = () => {
     const removeWatchlist = (id) => {
         console.log(id);
     }
-
     useEffect(() => {
+        
        if(watchlist.length > 0) {
-        setWatch(state =>([...state, watchlist])); 
+            setWatch(watchlist);
        }
     }, [watchlist]);
-
 
     return (
         <div>
@@ -39,20 +38,18 @@ const WatchList = () => {
                     <td colSpan = "5" className= "nothing">
                                 <h1 className = "empty-placeholder">Empty Watchlist....</h1>
                                  </td>
-                    </tr> : watch.map(an =>
-                        
-                    an.map(items =>  
-                    
-                    <tr key = {items._id}>
-                            <th scope = "row"><img src ={items.img_url} /></th>
-                            <td className = "header">{items.anime_title}</td>
-                            <td className = "header">{items.episodes}</td>
-                            <td className = "header">{items.status}</td>
-                            <td className = "header"><Button color = "primary" onClick = {() => removeWatchlist(items._id)} >Remove</Button></td>
+                    </tr> : watch.map(anime =>
+            
+                    <tr key = {anime._id}>
+                            <th scope = "row"><img src ={anime.img_url} /></th>
+                            <td className = "header">{anime.anime_title}</td>
+                            <td className = "header">{anime.episodes}</td>
+                            <td className = "header">{anime.status}</td>
+                            <td className = "header"><Button color = "primary" onClick = {() => removeWatchlist(anime._id)} >Remove</Button></td>
                     </tr>
                     
-                    )    
-                    
+                
+                
                     )}
                 </tbody>
                     

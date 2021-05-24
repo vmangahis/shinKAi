@@ -1,6 +1,13 @@
 import {GET_ANIME, DEL_ANIME, ADD_ANIME, EXT_ANIME, ADD_WATCHLIST} from './types';
 
+
+const filterAnime = () => {
+
+}
+
+
 export const getAnime = (data) =>{
+    
     return{
         type: GET_ANIME,
         data
