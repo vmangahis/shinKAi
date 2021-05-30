@@ -11,13 +11,13 @@ import WatchList from './components/WatchList';
 function App() {
   return (
     <>
-    <Provider store = {store}>
-    <div>
-    <AppNavBar />
-    <SearchList />
-    <WatchList />
-    </div>    
-    </Provider>
+      <Provider store = {store}>
+      <div>
+      <AppNavBar />
+      <SearchList />
+      <WatchList />
+      </div>    
+      </Provider>
     </>
   );
 }

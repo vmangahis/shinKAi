@@ -1,4 +1,4 @@
-import {GET_ANIME, DEL_ANIME, ADD_ANIME, ADD_WATCHLIST} from './types';
+import {GET_ANIME, DEL_ANIME, ADD_ANIME, ADD_WATCHLIST, REM_ANIME} from './types';
 
 
 export const getAnime = (data) =>{
@@ -13,6 +13,13 @@ export const delAnime = id =>{
     return{
         type: DEL_ANIME,
         load: id
+    }
+}
+
+export const removeAnime = id => {
+    return{
+        type: REM_ANIME,
+        payload: id
     }
 }
 
