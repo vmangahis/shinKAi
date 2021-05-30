@@ -1,5 +1,4 @@
-import {v4 as uuidv4} from 'uuid';
-import {GET_ANIME, DEL_ANIME, ADD_ANIME, EXT_ANIME, ADD_WATCHLIST} from '../actions/types';
+import {GET_ANIME, DEL_ANIME, ADD_WATCHLIST} from '../actions/types';
 import thunk from 'redux-thunk';
 
 const initialState = {
@@ -23,12 +22,6 @@ const animeReducer = (state = initialState, action) => {
             return{
                 ...state,
                
-            }
-            break;
-
-        case EXT_ANIME:
-            return{
-                ...state
             }
             break;
 

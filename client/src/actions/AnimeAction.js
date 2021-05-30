@@ -1,9 +1,4 @@
-import {GET_ANIME, DEL_ANIME, ADD_ANIME, EXT_ANIME, ADD_WATCHLIST} from './types';
-
-
-const filterAnime = () => {
-
-}
+import {GET_ANIME, DEL_ANIME, ADD_ANIME, ADD_WATCHLIST} from './types';
 
 
 export const getAnime = (data) =>{
@@ -24,12 +19,6 @@ export const delAnime = id =>{
 export const addAnime = () => {
     return{
         type:ADD_ANIME
-    }
-}
-
-export const extAnime = () => {
-    return{
-        type:EXT_ANIME
     }
 }
 
